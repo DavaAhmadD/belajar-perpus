@@ -30,9 +30,14 @@
                         <td>{{ $b->penerbit }}</td>
                         <td>{{ $b->tahun_terbit }}</td>
                         <td>{{ $b->stok }}</td>
-                        <td></td>
+                        <td>
+                            <form action="{{ route('buku.destroy',['id' => $b->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Hapus</button>
+                            </form>
+                        </td>
                     </tr>
-        
                     @endforeach
                 </tbody>
             </table>

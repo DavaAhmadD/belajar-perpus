@@ -44,5 +44,6 @@ Route::get('operator', function(){
 Route::get('/daftarbuku',[BukuController::class, 'index'])->name('buku.index');
 Route::get('/add_daftar_buku',[BukuController::class, 'create'])->name('buku.create');
 Route::post('/add_daftar_buku/save',[BukuController::class, 'store'])->name('buku.store');
+Route::delete('/daftarbuku/delete/{id}',[BukuController::class, 'destroy'])->name('buku.destroy');
 
 require __DIR__.'/auth.php';

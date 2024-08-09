@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BukuModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BukuController extends Controller
 {
@@ -88,8 +89,12 @@ class BukuController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(BukuModel $bukuModel)
+    public function destroy($id)
     {
-        //
+        $buku = BukuModel::findOrFail($id);
+        Storage::delete('public/buku/'. $buku->image);
+        $buku->delete();
+
+        return redirect()->route('buku.index')->with('success', 'Data Buku berhasil dihapus');
     }
 }
