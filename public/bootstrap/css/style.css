@@ -1,0 +1,43 @@
+.navbar-color{
+    background-color: #E9C972;
+}
+
+.text-dashboard,
+.text-create,
+label{
+    color: #2D2425;
+}
+
+.button{
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-tambah,
+.btn-simpan{
+    background-color: #E9C972;
+    color: #2D2425;
+}
+.btn-tambah:hover,
+.btn-simpan:hover{
+    background-color:#b49b57;
+}
+
+.btn-batal{
+    background-color: #2D2425;
+    color: #E9C972;
+}
+.btn-batal:hover{
+    background-color: #5e5d5d;
+}
+
+.custom-swal-button{
+    background-color: #E9C972;
+    color: #2D2425;
+    padding: 8px 10px;
+    border: none !important;
+    border-radius: 8px;
+    text-decoration: none;
+}
