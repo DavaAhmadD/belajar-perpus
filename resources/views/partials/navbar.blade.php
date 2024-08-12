@@ -11,6 +11,12 @@
           <a class="nav-link" href="#">Daftar Peminjam</a>
           <a class="nav-link" href="#">Daftar Pengguna</a>
         </div>
+        <div class="navbar-nav ms-auto">
+          <form action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button type="submit" class="button btn-logout">Logout</button>
+          </form>
+      </div>
       </div>
     </div>
   </nav>

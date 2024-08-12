@@ -92,7 +92,7 @@ class BukuController extends Controller
     public function destroy($id)
     {
         $buku = BukuModel::findOrFail($id);
-        Storage::delete('public/buku/'. $buku->image);
+        Storage::delete(public_path('storage/buku/' . $buku->image));
         $buku->delete();
 
         return redirect()->route('buku.index')->with('success', 'Data Buku berhasil dihapus');

@@ -46,3 +46,12 @@ label{
     border: #fff;
     outline: none;
 }
+
+.btn-logout {
+    background-color: #DC3545;
+    color: #fff;
+}
+.btn-logout:hover{
+    background-color: rgb(189, 95, 104);
+    color: #fff;
+}
